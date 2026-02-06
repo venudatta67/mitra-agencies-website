@@ -1,0 +1,289 @@
+/* General Reset */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: skyblue;
+    color: #333;
+    height: 100%; /* Ensure body and html take full height */
+}
+
+.header {
+    text-align: center;
+    padding: 20px;
+    background: linear-gradient(90deg, #0077b6, #00b4d8);
+    color: white;
+}
+
+/* Menu Styles */
+.menu {
+    display: flex;
+    justify-content: center;
+    background-color: #0077b6;
+    padding: 10px 0;
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+    gap: 10px; /* Add gap between items for better visibility */
+}
+
+.menu-item {
+    margin: 0 15px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.menu-item:hover {
+    color: #00b4d8;
+}
+
+
+
+/* Fullscreen Flexbox Container */
+.content-container {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    height: calc(100vh - 120px);
+    padding: 20px;
+    box-sizing: border-box;
+    gap: 40px;
+    
+}
+
+/* Contact Form */
+.contact-form-container {
+    flex: 1;
+    max-width: 500px;
+    width: 100%;
+    background-color: rgb(189, 230, 241);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: left; /* Aligns the items to the start */
+    gap: 20px;
+    
+}
+
+.contact-form-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #0077b6;
+}
+
+.contact-form-container input, 
+.contact-form-container textarea {
+    align-items: left;
+    width: 90%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 20px; 
+    margin: 10px 0;
+}
+
+.contact-form-container button {
+    width: auto;
+    padding: 10px;
+    background-color: #0077b6;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form-container button:hover {
+    background-color: #005f99;
+}
+
+.message {
+    margin-top: 15px;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    display: none;
+  }
+
+.message.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+  }
+
+.message.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+  }
+
+/* Image */
+.image-container {
+    flex: 1;
+    max-width: 800px;
+    width: 100%;
+}
+
+.image-container .store-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Fade-in effect */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    .content-container {
+        flex-direction: column; /* Stack form and image vertically */
+        gap: 20px; /* Reduce gap for smaller screens */
+    }
+
+    .contact-form-container, 
+    .image-container {
+        max-width: 90%; /* Adjust width to fit smaller screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .menu {
+        flex-direction: column; /* Stack menu items vertically */
+        align-items: center;
+        gap: 10px;
+    }
+
+    .contact-form-container {
+        padding: 15px; /* Reduce padding */
+    }
+
+    .contact-form-container button {
+        font-size: 14px; /* Reduce button size */
+    }
+
+    .content-container {
+        gap: 15px; /* Further reduce the gap between stacked items */
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        padding: 15px; /* Reduce padding */
+    }
+
+    .menu-item {
+        font-size: 14px; /* Reduce font size for menu items */
+        margin: 5px 0;
+    }
+
+    .contact-form-container input, 
+    .contact-form-container textarea {
+        font-size: 14px; /* Reduce input font size */
+    }
+
+    .contact-form-container button {
+        font-size: 12px; /* Further reduce button size */
+    }
+}
+
+/* Responsive Menu Styles */
+@media (max-width: 1024px) {
+    .menu {
+        flex-direction: row; /* Still horizontal for larger tablets */
+        gap: 15px; /* Increase gap slightly for visibility */
+    }
+
+    .menu-item {
+        font-size: 16px; /* Slightly smaller font size for menu items */
+    }
+}
+
+@media (max-width: 768px) {
+    .menu {
+        flex-direction: column; /* Stack menu items vertically */
+        align-items: center;
+        gap: 10px; /* Reduce gap for tighter spacing */
+    }
+
+    .menu-item {
+        font-size: 14px; /* Reduce font size further */
+        margin: 5px 0; /* Adjust margin for vertical layout */
+    }
+}
+
+/* Product Page Styles */
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    justify-items: center;
+}
+
+.category-item {
+    background: rgb(174, 220, 235);
+    border: 1px solid #0077b6;
+    border-radius: 8px;
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.category-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.category-item h3 {
+    color: #0077b6;
+    margin-bottom: 15px;
+}
+
+.product-image {
+    width: 100%;
+    height: auto;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+/* Fade-in effect */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .category-grid {
+        grid-template-columns: 1fr; /* Single column on smaller screens */
+        gap: 15px;
+    }
+
+    .product-image {
+        max-height: 150px;
+    }
+}
+
+

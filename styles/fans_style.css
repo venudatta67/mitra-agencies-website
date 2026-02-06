@@ -1,0 +1,172 @@
+/* General Styling */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #c7ebf1;
+    color: #333;
+}
+
+/* Navigation Menu Styles */
+.navigation {
+    background-color: #004d7a;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.menu-item {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+    font-size: 1.1em;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.menu-item:hover {
+    color: #00aaff;
+    transform: scale(1.1);
+}
+
+/* Content Section */
+.content {
+    padding: 20px;
+    text-align: center;
+}
+
+.content h1 {
+    margin-bottom: 30px;
+    font-size: 2.2em;
+    color: #004d7a;
+}
+
+/* Horizontal Layout for Categories */
+.categories {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 0 20px;
+}
+
+/* Individual Category Styling */
+.category {
+    background-color: #ecf7f8;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.category:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Product Layout */
+.brand {
+    margin: 15px 0;
+}
+
+.brand h3 {
+    color: #0077b6;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #00aaff;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.product {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.product:last-child {
+    border-bottom: none;
+}
+
+/* Product Image */
+.product img {
+    width: 150px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer; /* Adds a pointer cursor for interactivity */
+}
+
+.product img:hover {
+    transform: scale(1.5); /* Enlarges the image when hovered */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Adds a larger shadow for emphasis */
+    z-index: 10; /* Ensures the image appears above other content */
+    position: relative; /* Required for the z-index to work */
+}
+
+/* Product Information */
+.product-info {
+    padding: 10px;
+    text-align: left;
+}
+
+.product-info h2 {
+    font-size: 1.2em;
+    color: #005b96;
+    margin-bottom: 10px;
+}
+
+.product-info p {
+    margin: 5px 0;
+    font-size: 0.9em;
+}
+
+/* Icon Box */
+.icon-box {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.icon-box span {
+    background-color: #e0f7fa;
+    color: #0077b6;
+    font-size: 0.8em;
+    padding: 5px 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .categories {
+        flex-direction: column;
+    }
+
+    .product {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .product img {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .menu {
+        flex-direction: column;
+    }
+
+    .menu-item {
+        margin: 10px 0;
+    }
+}
