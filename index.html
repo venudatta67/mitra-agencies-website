@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mitraagencies - Home</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</head>
+<body>
+    <header class="header fade-in">
+        <h1><b><u>MITRA AGENCIES</u></b></h1>
+        <p>Owner:  <span>K.S. Balachandra</span></p>
+        <p>Contact:  <a href="tel:+91-9440021066">+91-9490676066</a></p>
+        <p>Email:  <a href="mailto:dattasashanka@gmail.com">dattasashanka@gmail.com</a></p>
+        <p>Address:  Opposite to Annapurna Theatre, P.P Road, Bhimavaram, 534201.</p>
+    </header>
+
+    <nav class="menu fade-in">
+        <a href="#owner" class="menu-item">Owner</a>
+        <a href="#contact" class="menu-item">Contact</a>
+        <a href="#address" class="menu-item">Address</a>
+        <a href="products.html" class="menu-item">Products</a>
+    </nav>
+
+    <section class="content-container fade-in">
+        <div class="contact-form-container">
+            <h2>Contact Us</h2>
+            <form id="contact-form" action="/submit" method="POST">
+                <input type="text" name="Name" placeholder="Your Name" required><br>
+                <input type="email" name="Email" placeholder="Your Email" required><br>
+                <input type="tel" name="Contact No" placeholder="Your Contact Number" required><br>
+                <textarea name="Specifications(any)" rows="4" placeholder="Your Message" required></textarea><br>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+        <div class="image-container">
+            <img src="https://img.freepik.com/premium-photo
+                   /serene-ganesha-statue-hindu-god-wisdom-prosperity-sits-amidst-lush-tropical-leav_924727-140218.jpg" alt="Lord Ganesha" class="store-image">
+        </div>
+    </section>
+</body>
+</html>
